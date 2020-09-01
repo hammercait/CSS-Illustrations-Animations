@@ -1,0 +1,253 @@
+body{
+	height:100vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	background-color:#A2E8DB;
+}
+
+.head{
+	position:relative;
+	width:300px;
+	height:300px;
+	background-color:#EC9F47;
+	border-radius:50% 50% 60% 60%;
+	border-bottom:1px solid #CF8B3E;
+}
+
+.head:before{
+	content:"";
+	position:absolute;
+	background-color:#765024;
+	opacity:.5;
+	width:90%;
+	height:90%;
+	top:14%;
+	left:5%;
+	border-radius:50%;
+	z-index:-1
+}
+
+.body{
+	width:300px;
+	height:300px;
+	position:absolute;
+	background-color:#EC9F47;
+	border-radius:50% 50% 10% 10%;
+	top:55%;
+	z-index:-2
+}
+.chest{
+	position:absolute;
+	width:150px;
+	height:150px;
+	background-color:white;
+	transform:rotate(224deg) translate(-50%, -50%);
+	border-radius:0 50% 50%;
+	left:25%;
+	}
+
+
+
+.snout{
+	position:absolute;
+	width:100px;
+	height:100px;
+	background-color:white;
+	left:50%;
+	top:60%;
+	transform:translate(-50%, -50%) rotate(225deg);
+}
+
+.snout:before{
+	content:"";
+	background-color:white;
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:0;
+	transform:translateY(-50%);
+	box-shadow:-1px 0px 1px #DAD9D8;
+}
+
+.snout:after{
+content:"";
+	background-color:white;
+	width:100%;
+	height:100%;
+	border-radius:50%;
+	position:absolute;
+	top:0;
+	left:0;
+	transform:translateX(-50%);
+	box-shadow:-1px 0px 1px #DAD9D8;
+}
+
+.chin{
+	position:absolute;
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background-color:white;
+	left:50%;
+	top:82%;
+	transform:translate(-50%, -50%);
+}
+
+.nose{
+	position:absolute;
+	width:55px;
+	height:45px;
+	background-color:black;
+	border-radius:40% 40% 50% 50%;
+	left:50%;
+	top:70%;
+	transform:translate(-50%, -50%);
+}
+
+.eye-left{
+	width:30px;
+	height:30px;
+	position:absolute;
+	background-color:black;
+	border-radius:50%;
+	left:20%;
+	top:40%;
+	animation:blink 4s infinite;
+}
+
+.eye-right{
+	width:30px;
+	height:30px;
+	position:absolute;
+	background-color:black;
+	border-radius:50%;
+	right:20%;
+	top:40%;
+	animation:blink 4s infinite;
+}
+
+@keyframes blink {
+  0% { height: 30px; }
+	49% { height: 30px; }
+	50% { height: 0; }
+	51% { height: 0; }
+	52% {	height:30px;}
+  100% { height:30px; }
+}
+
+.ear-right{
+	position:absolute;
+	background-color:#EC9F47;
+	top: -32%;
+  right:-5%;
+  height: 200px;
+  width: 115px;
+  border-top-left-radius: 40% 100%;
+  border-top-right-radius: 100% 100%;
+	transform-origin: bottom center;
+	transform:rotate(55deg);
+	animation:ears2 6s infinite;
+}
+
+.ear-left{
+	position:absolute;
+	background-color:#EC9F47;
+	top: -32%;
+  left:-5%;
+  height: 200px;
+  width: 115px;
+  border-top-left-radius: 40% 100%;
+  border-top-right-radius: 100% 100%;
+	transform-origin: bottom center;
+	transform:rotate(-55deg) scaleX(-1);
+	animation:ears1 6s infinite;
+	
+}
+
+.inner-ear{
+	width:60%;
+	height:60%;
+	background-color:white;
+	position:absolute;
+	 border-top-left-radius: 40% 100%;
+  border-top-right-radius: 100% 100%;
+	top: 20%;
+  left: 20%;
+}
+
+
+@keyframes ears1{
+	0%{transform:rotate(-55deg) scaleX(-1);}
+	50%{transform: rotate(-50deg)scaleX(-1);}
+}
+
+@keyframes ears2{
+	0%{transform:rotate(55deg)}
+	50%{transform: rotate(50deg);}
+}
+
+.tongue{
+	position:absolute;
+	background-color:pink;
+	width:50px;
+	height:70px;
+	border-radius:0 0 50% 50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	top:80%;
+	animation:tongue 1s infinite;
+}
+
+.tongue:after{
+	content:"";
+	position:absolute;
+	width:1px;
+	height:60px;
+	background-color:#FE91A9;
+	left:50%;
+	
+}
+
+@keyframes tongue{
+	0%{top:85%; }
+	25%{top:90%;}
+	50%{top:85%;}
+	75%{top:90%;}
+	100%{top:85%;}
+	}
+
+.white-stripe{
+	width:20%;
+	height:60%;
+	background-color:white;
+	position:absolute;
+	left:50%;
+	transform:translate(-50%, -50%);
+	top:30%;
+}
+
+.white-stripe:before{
+	content:"";
+	position:absolute;
+	background-color:#EC9F47;
+	width:60%;
+	height:78%;
+	border-radius:50%;
+	left:-33%;
+	transform:rotate(2deg);
+}
+
+.white-stripe:after{
+	content:"";
+	position:absolute;
+	background-color:#EC9F47;
+	width:60%;
+	height:78%;
+	border-radius:50%;
+	right:-33%;
+	transform:rotate(-2deg);
+}
+
